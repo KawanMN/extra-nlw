@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-image: url(./assets/estrelas.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #050505;
+
+}
+
+body * {
+    line-height: 160%;
+}
+
+header {
+    padding-top: 32px;
+    height: calc(120px + 32px);
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #100d9c 0%, #000000 50.52%, #4c942f 100%);
+    margin: auto;
+    display: flex;
+    border-radius: 50%;
+    padding: 4px;
+    transition: transform .3s;
+    animation: fromtop .7s .2s backwards;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+
+header img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+main {
+
+    width: 520px;
+    margin: 32px auto;
+    display: grid;
+    gap: 32px;
+    top: 32px;
+}
+
+main section {
+    animation: frombottom .7s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .8s;
+}
+
+
+section {
+    background-image: linear-gradient(90deg, #100d9c 0%, #000000 50.52%, #4c942f 100%);
+    color: white;
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section div {
+    background-color: #2a2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+
+}
+
+section h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 160%;
+    color: #FFFFFF;
+}
+
+section p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: -0.18px;
+    color: #C1C1C1;
+}
+
+section ul {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    padding: 0;
+}
+
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
+.filmes-list img {
+    padding: 0px;
+    gap: 16px;
+    width: 100px;
+    height: 150px;
+    border: 1px solid #555555;
+    border-radius: 8px;
+}
+
+.series-list img {
+    padding: 0px;
+    gap: 16px;
+    width: 100px;
+    height: 150px;
+    border: 1px solid #555555;
+    border-radius: 8px;
+}
+
+/* Animation */
+
+@keyframes fromtop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes frombottom {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
